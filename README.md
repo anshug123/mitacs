@@ -7,6 +7,7 @@ This script processes torsion data, clusters it using DBSCAN, and outputs filter
 ```bash
 python script.py <torsion_file> <xyz_file> <symmetry_file>
 
+```
 <torsion_file>: Input file containing torsion data.
 <xyz_file>: Input XYZ file containing conformer information.
 <symmetry_file>: Input file containing symmetry values.
@@ -48,7 +49,7 @@ To run the script, use the following command:
 
 ```bash
 python script.py torsion_data.txt conformers.xyz symmetry_values.txt
-
+```
 # Dependencies
 pandas
 numpy
@@ -58,7 +59,7 @@ matplotlib
 Make sure to install the required dependencies before running the script:
 ```bash
 pip install pandas numpy scikit-learn matplotlib
-
+```
 # Notes
 Ensure that the input files are formatted correctly and contain valid data.
 The script handles ValueError exceptions during energy extraction and checks for matching symmetry values.
