@@ -48,7 +48,7 @@ filtered_temp.xyz: Contains the filtered conformers based on the clustering resu
 To run the script, use the following command:
 
 ```bash
-python script.py torsion_data.txt conformers.xyz symmetry_values.txt
+python process_torsion.py torsion_data.txt conformers.xyz symmetry_values.txt
 ```
 # Dependencies
 pandas<br>
