@@ -8,23 +8,27 @@ This script processes torsion data, clusters it using DBSCAN, and outputs filter
 python script.py <torsion_file> <xyz_file> <symmetry_file>
 
 ```
-<torsion_file>: Input file containing torsion data i.e, torsion values for all the conformers. <br>
-<xyz_file>: Input XYZ file containing conformer information. It contains xyz coordinates for all atoms of each conformer, it also contains energy for that conformer. <br>
-<symmetry_file>: Input file containing symmetry values for all torsions. for eg. if some torsion have 3-fold symmetry then 3
+<torsion_file>: Input file containing torsion data. <br>
+<xyz_file>: Input XYZ file containing conformer information. <br>
+<symmetry_file>: Input file containing symmetry values.
 
 # Script Steps
 
 ## Input Parsing:
 The script expects three input files: torsion data, XYZ data, and symmetry data. <br>
+The script validates the number of command-line arguments.
 
 ## Energy Extraction:
 Extracts energy values from the XYZ file.
 
 ## Data Processing:
+Reads torsion data from the input file and saves it to a CSV file. <br>
+Loads the torsion data into a DataFrame and removes the Serial_Number column. <br>
 Reads symmetry values and adjusts torsion values based on these values.<br>
 Normalizes the torsion data and scales the torsion values based on symmetry.
 
 ## DBSCAN Clustering:
+Defines epsilon values for DBSCAN.<br>
 Determines the number of clusters for each epsilon value and plots the results.<br>
 Prompts the user to select an epsilon value based on the plot.<br>
 Applies DBSCAN clustering with the chosen epsilon value.<br>
