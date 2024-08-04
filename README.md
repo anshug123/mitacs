@@ -2,6 +2,9 @@
 
 This repository contains three folders :
 
+## report_mitacs.pdf
+This is report of whole project including INTRODUCTION, DATASETS, PREPROCESSING STEPS, METHODOLOGY AND RESULTS
+
 ## preprocess_torsion
 This folder contains file process_torsion.py which is used to identify and remove duplicates from TORSION data given by CREST.<br>
 Its output will be filtered torsion file and filtered xyz file.<br>
